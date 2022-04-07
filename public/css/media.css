@@ -1,0 +1,22 @@
+/* @media screen and (min-width:740) and (max-width:1024px) {
+
+    body {}
+} */
+
+
+@media (min-width: 320px) and (max-width: 740px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    header p {
+        display: none;
+    }
+
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

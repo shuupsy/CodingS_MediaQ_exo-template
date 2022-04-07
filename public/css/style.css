@@ -28,34 +28,104 @@ header {
 
 /* Eléments du header */
 .intro img {
-    width: 70px; /* taille du logo */
+    width: 70px;
+    /* taille du logo */
 }
 
 h1 {
-    font-size: 1rem; /* Taille titre du site */
+    font-size: 1rem;
+    /* Taille titre du site */
 }
-.intro p, li {
-    padding: 10px 0; /* espace entre les liens menus et intro*/
+
+.intro p,
+li {
+    padding: 10px 0;
+    /* espace entre les liens menus et intro*/
 }
+
 footer p {
-    padding-top: 8px; /* espace entre lignes*/
+    padding-top: 8px;
+    /* espace entre lignes*/
 }
-p,a {
+
+p,
+a {
     font-size: 14px;
     color: black;
     /* taille et couleur de police */
 }
-.intro p, footer p:first-child {
-    color: grey; /* couleur de police gris */
+
+.intro p,
+footer p:first-child {
+    color: grey;
+    /* couleur de police gris */
 }
 
-a,footer p:last-child {
+a,
+footer p:last-child {
     font-weight: bold;
     /* en gras: liens menus, dernier p */
 }
+
 /* Icones fontawesome */
 .social i {
     padding-right: 15px;
     padding-bottom: 5px;
 }
+
 /* Fin header */
+.test {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-areas:
+        'img1 img2 img3'
+        'img4 img2 img5'
+        'img4 img7 img5'
+        'img6 img7 img8'
+        'img6 . img8';
+    /* Grid mise en page des photos */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Assigner les div aux zones de grid */
+#top-left {
+    grid-area: img1;
+}
+
+#top-right {
+    grid-area: img3;
+}
+
+#top {
+    grid-area: img2;
+}
+
+#left {
+    grid-area: img4;
+}
+
+#right {
+    grid-area: img5;
+}
+
+#middle {
+    grid-area: img7;
+}
+
+#bottom-left {
+    grid-area: img6;
+}
+
+#bottom-right {
+    grid-area: img8;
+}
