@@ -12,6 +12,7 @@
 
 body {
     font-family: Ubuntu, sans-serif;
+    width: 100%;
     display: grid;
     grid-template-columns: 300px 1fr;
 }
@@ -20,7 +21,7 @@ body {
 header {
     height: 100vh;
     display: grid;
-    grid-template-rows: 2fr 3, 5fr 1fr;
+    grid-template-rows: 2fr 3fr, 5fr 1fr;
     align-items: center;
     padding-left: 30px;
     padding-right: 50px;
@@ -74,58 +75,49 @@ footer p:last-child {
 }
 
 /* Fin header */
-.test {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-}
 
 main {
-    height: 100vh;
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(3,1fr) ;
-    grid-template-areas:
-        'img1 img2 img3'
-        'img4 img2 img5'
-        'img4 img7 img5'
-        'img6 img7 img8'
-        'img6 . img8';
-    /* Grid mise en page des photos */
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px 200px;
+    grid-gap: 10px;
 }
 
-/* Assigner les div aux zones de grid */
-#top-left {
-    grid-area: img1;
+.col {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
 }
 
-#top-right {
-    grid-area: img3;
+.col div {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    overflow: hidden;
 }
 
-#top {
-    grid-area: img2;
+.col div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease-in-out;
 }
 
-#left {
-    grid-area: img4;
+.col:hover img {
+    transform: scale(1.5);
 }
 
-#right {
-    grid-area: img5;
+.w-1,
+.w-2,
+.w-3 {
+    grid-column: span 1;
 }
 
-#middle {
-    grid-area: img7;
+.h-1 {
+    grid-row: span 1;
 }
 
-#bottom-left {
-    grid-area: img6;
-}
-
-#bottom-right {
-    grid-area: img8;
+.h-2 {
+    grid-row: span 2;
 }

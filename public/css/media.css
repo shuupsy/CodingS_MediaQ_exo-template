@@ -7,16 +7,33 @@
 @media (min-width: 320px) and (max-width: 740px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 60px 1fr;
     }
-
-    header p {
+    header {
+        height: 10vh;
+        grid-template-columns: 60px 1fr;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header p, footer, h1 {
         display: none;
     }
 
-
     main {
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+    }
+    .col div img {
+        object-fit:none;
+        transition: .5s ease-in-out;
+    }
+    .col:hover div img{
+        transform: none;
+    }
+   
+    .h-2 {
+        grid-row: span 1;
     }
 }
