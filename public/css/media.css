@@ -7,21 +7,18 @@
 @media (min-width: 320px) and (max-width: 740px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 1fr;
     }
     header {
-        height: 10vh;
-        grid-template-columns: 60px 1fr;
-    }
-    ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 0 3vh;
     }
     header p, footer, h1 {
         display: none;
     }
-
+.intro {
+    text-align: end;
+}
     main {
         grid-template-columns: 1fr;
     }
